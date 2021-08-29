@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>chi</title>
   <link rel="icon" href="favicon.ico" />
+  <script src="jquery-2.1.4.js"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="keywords" content="docs,documentation,go-chi,chi,router,api,go-router,rest-api,golang,microservice" />
   <meta property="og:title" content="go-chi docs" />
@@ -22,8 +23,15 @@
 </head>
 <body>
   <div id="app">
-    <div class="loader"></div>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
   </div>
+  <script>
+    $(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
    <!-- set dark mode if not already set -->
   <script>  
     if (!localStorage.getItem('DARK_LIGHT_THEME')){
